@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>전갈자리 결과</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #45357D;
+      font-family: 'Pretendard', sans-serif;
+      color: #fff;
+      padding: 40px 16px 100px;
+    }
+    .container {
+      width: 100%;
+      max-width: 485px;
+      margin: 0 auto;
+    }
+    .header { text-align: center; margin-bottom: 32px; }
+    .header img { width: 180px; margin-bottom: 12px; }
+    .header h1 { font-size: 22px; font-weight: 700; color: #FFD579; }
+    .header p { font-size: 14px; color: #FFD579; margin-top: 4px; }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card.myth {
+      background-color: #45357D;
+      border: none;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      color: #FFEA92;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-left: 8px;
+      padding-bottom: 4px;
+      border-left: 3px solid #ffea92;
+    }
+
+    .card h2::before { content: '✨'; margin-right: 8px; }
+    .card p { font-size: 14px; line-height: 1.8; }
+
+    .highlight { color: #FFD579; font-weight: bold; }
+    .good { color: #56bad6; font-weight: bold; }
+    .bad { color: #FFC0CB; font-weight: bold; }
+    .spaced { margin-top: 14px; }
+
+    .extra-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .sub-button {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
+
+    .sub-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px 3px #fff;
+      transform: translateY(-1px);
+    }
+
+    .coordi-toggle {
+      margin-top: 8px;
+      font-size: 20px;
+      color: #FFD579;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, text-shadow 0.3s;
+    }
+
+    .coordi-toggle:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 8px #FFD579;
+    }
+
+    .coordi-img {
+      display: none;
+      margin-top: 12px;
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://i.imgur.com/AatM3fQ.png" alt="전갈자리 캐릭터">
+      <h1>🦂 전갈자리 🦂</h1>
+      <p>10월 23일 ~ 11월 22일</p>
+    </div>
+
+    <div class="card myth">
+      <h2>신화 소개</h2>
+      <p>전갈자리는 거만한 사냥꾼 오리온을 벌하기 위해 헤라가 보낸 전갈에서 유래했다. 오리온은 결국 아르테미스의 화살에 맞아 죽었고, 전갈은 그 공로로 별자리가 되었다. 밤하늘에서는 전갈자리가 떠오르면 오리온자리는 지고, 전갈이 지면 오리온이 다시 떠오르며 둘은 절대 만나지 않는다. 중국에서는 이 별들을 삼과 상이라 부르며, "한 치의 양보도 없는 삼과 상"이라는 말이 전해진다.</p>
+      <p class="spaced"><span class="highlight">유명인:</span> 전지현, 닝닝, 박나래, 보아, 산다라박</p>
+    </div>
+
+    <div class="card">
+      <h2>성격</h2>
+      <p>묵직하고 강렬한 매력을 가진 전갈자리는 직관력과 집중력이 뛰어나다. 감정을 잘 드러내지 않지만, 속으론 누구보다 깊은 감정을 품고 있다.</p>
+      <p>신중하고 비밀스러운 성향으로, 쉽게 마음을 열지 않지만 한번 마음을 열면 끝까지 가는 스타일. 소유욕과 집착이 강하고, 감정에 있어서 올인한다.</p>
+      <p>때로는 무섭도록 냉철하지만, 진정으로 아끼는 사람에게는 누구보다 따뜻하고 헌신적이다.</p>
+    </div>
+
+    <div class="card">
+      <h2>궁합</h2>
+      <p><span class="good">좋은 궁합:</span> 물고기자리, 게자리, 염소자리<br>
+         <span class="bad">나쁜 궁합:</span> 양자리, 쌍둥이자리</p>
+      <p class="spaced">비밀스럽고 감정의 깊이가 남다른 전갈자리는 한번 마음을 열면 강한 집착과 헌신을 보인다.</p>
+      <p>물고기자리, 게자리처럼 정서적 교감이 깊은 별자리와는 누구보다도 진한 관계를 유지할 수 있다. 염소자리와도 서로의 신중함과 성실함을 존중하며 신뢰를 쌓는다.</p>
+      <p>하지만 직설적이고 즉흥적인 양자리나 쾌활하고 가벼운 쌍둥이자리와는 감정의 무게 차이로 힘들 수 있다.</p>
+    </div>
+
+    <div class="card">
+      <h2>TIP</h2>
+      <p><span class="good">참고할 것:</span> 주변 관계는 힘들지만, 행운 지수가 좋아서 나쁜 일만큼 위로받을 일도 생기고, 일과 금전운이 아주 좋아서 능력을 발휘하고 수익을 얻기 좋은 주간이에요!</p>
+      <p><span class="bad">주의할 것:</span> 가까운 사람들에게 상처받거나 실망하기 쉽고, 새로운 만남도 기대에 못 미쳐서 사람들을 많이 만나는 것이 오히려 해가 될 수 있는 주간입니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>행운 정보</h2>
+      <p><span class="highlight">행운의 숫자:</span> 2 , 3<br>
+         <span class="highlight">행운의 색상:</span> 검은색, 진홍색<br>
+         <span class="highlight">행운의 자음:</span> ㄹ , ㄷ<br>
+         <span class="highlight">베스트 운동:</span> 근력운동 / 배드민턴 / 수영<br>
+         <span class="highlight">행운의 장소:</span> 비밀스러운 공간, 스파, 심리상담소 → 깊이 있는 공간에서 내면의 에너지를 충전하세요.<br>
+         <span class="highlight">행운의 아이템:</span> 책, 도서(종이로 된 물건)<br>
+         <span class="highlight">행운의 코디:</span> 다크 컬러 셔츠 + 블랙진 + 시크한 소품</p>
+      <button id="toggleBtn" class="coordi-toggle" onclick="toggleCoordi()">+</button>
+      <img id="coordiImage" class="coordi-img" src="https://i.imgur.com/4Ou31W8.png" alt="행운의 코디  이미지">
+    </div>
+  </div>
+
+
+ <div class="extra-buttons">
+
+  <button class="sub-button" onclick="location.href='https://kimjiwoow.github.io/write-/'">뒤로가기</button>
+  
+  <button class="sub-button" onclick="location.href='https://kimjiwoow.github.io/write-/'">포춘카드 뽑기</button>
+</div>
+
+  <script>
+    function toggleCoordi() {
+      const img = document.getElementById("coordiImage");
+      const button = document.getElementById("toggleBtn");
+
+      if (img.style.display === "block") {
+        img.style.display = "none";
+        button.innerText = "+";
+      } else {
+        img.style.display = "block";
+        button.innerText = "–";
+      }
+    }
+  </script>
+</body>
+</html>
